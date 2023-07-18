@@ -2,7 +2,12 @@ use std::fs::OpenOptions;
 use std::io::{Read, stdin, Write};
 
 fn main() {
-    renamefile();
+    deletingfile();
+}
+
+fn deletingfile(){
+    let path = "text.txt";
+    std::fs::remove_file(path).expect("Error deleting file!");
 }
 
 fn renamefile(){
